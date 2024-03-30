@@ -1,0 +1,161 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    padding: 0 20px;
+    
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: auto;
+  width: 90%;
+  margin-top: 40px;
+  
+  }
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color:#f9f9f9;
+    
+  }
+ 
+  
+  .h1_first_page{
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+body
+{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+ 
+  button[type="button"] {
+    width: 20%;
+    padding: 10px;
+    background-color: #174e80;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #174e80;
+  }
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    background-color: #ffffff;
+
+
+}
+
+.table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+select{
+  width: 75%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  
+}
+input[type="submit"]
+{
+  width: auto;
+    padding: 10px;
+    background-color: #174e80;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px ;
+    width: 150px;
+}
+
+.container_register {
+  width: 380px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  padding-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;
+  
+}
+
+
+
+label {
+  display: inline;
+}
+h2{
+  color: #000;
+}
+

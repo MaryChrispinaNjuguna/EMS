@@ -1,0 +1,114 @@
+<?php
+session_start();
+if (!isset($_SESSION["username"]))
+{
+?>
+<script type="text/javascript">
+  window.location="admin_login.php";
+  </script>
+  <?php
+}
+?>
+<table class="table">
+            <tr>
+               <th>Registration No</th>
+                <th>Full Name</th>
+                <th>Unit Code</th>
+                <th>Unit Title</th>
+                <th>Total Questions</th>
+                <th>Total Marks</th>
+                <th>Grade</th>
+                <th>Percentage</th>
+                
+
+            </tr>
+    <?php
+    // Include the database connection file
+    include('connect.php');
+    $school = $_GET["school"];
+    $dept = isset($_GET["dept"]) ? $_GET["dept"] : '';
+    $course = isset($_GET["course"]) ? $_GET["course"] : '';
+    
+    // Start building the SQL query
+    $sql = "SELECT  * FROM results LEFT JOIN units ON results.unitcodeF = units.unitcode 
+    LEFT JOIN students ON results.reg_noF = students.reg_no WHERE units.school = '$school' ";    
+    // If $dept is not empty, include it in the query
+    if (!empty($dept)) {
+        $sql .= " AND units.dept = '$dept'";
+    }
+    
+    // If $course is not empty, include it in the query
+    if (!empty($course)) {
+        $sql .= " AND units.course = '$course'";
+    }
+        $result = $conn->query($sql);
+
+   
+
+    
+    // If $grade is not empty, include it in the query
+    
+    // SQL query to select data from the table
+    
+    $result = $conn->query($sql);
+
+   // Check if there are rows in the result set
+if ($result->num_rows > 0) {
+    // Output data of each row
+    while ($row = $result->fetch_assoc()) {
+        ?>
+       <div id="info"> 
+          <tr>
+          <td><?php echo $row["reg_no"] ?></td>
+          <td><?php echo  $row["student_fname"] ." ".$row["student_lname"]?></td>
+          <td><?php echo $row["unitcode"] ?></td>
+          <td><?php echo $row["unit_title"] ?></td>
+          <td style="text-align:center;"> <?php echo  $row["total_questions"] ?></td>
+          <?php
+        $sql1="SELECT SUM(weight) AS sum_value FROM questions WHERE unitcodeF='$row[unitcode]'";
+        $result1= $conn->query($sql1);
+        $row1 = $result1->fetch_assoc();
+        $sum_of_values = $row1['sum_value'];
+        echo "<td style='text-align:center'>".$row["marks"]."/" . $sum_of_values . "</td>";
+
+        $marks=$row["marks"];
+        $total=($marks/$sum_of_values)*100;
+        $total = intval($total);
+        echo "<td style='text-align:center'>".$total ."%". "</td>";
+
+         // Define the grading thresholds
+        $gradeA = 70;
+        $gradeB = 60;
+        $gradeC = 50;
+        $gradeD = 40;
+
+        // Calculate the grade based on the total score
+        if ($total >= $gradeA) {
+            $grade = 'A';
+        } elseif ($total >= $gradeB) {
+            $grade = 'B';
+        } elseif ($total >= $gradeC) {
+            $grade = 'C';
+        } elseif ($total >= $gradeD) {
+            $grade = 'D';
+        } else {
+            $grade = 'E';
+        }
+        echo "<td style='text-align:center'>".$grade . "</td>";
+
+        ?>
+         
+          </tr>
+       </div>
+          <?php
+      }
+      
+  }
+  
+  else {
+    ?>
+      <tr><td colspan='3'>0 results</td></tr>
+      <?php
+  }
+  ?>
+ </table>

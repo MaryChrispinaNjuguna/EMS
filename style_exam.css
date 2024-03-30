@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  
+ .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+ }
+ .video{
+    order:1;
+ }
+ .time{
+    order: 2;    
+      text-decoration: none;
+      margin-top: 0;
+      height: 150px;
+  
+
+ }
+ .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+   
+
+
+ }
+ 
+  .timer {
+    font-size: 24px;
+    font-weight: bold;
+  }
+.section{
+
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  
+
+}
+textarea {
+    width: 100%; /* Set the width to 100% of its container */
+    height: 50px; /* Set the initial height */
+    margin-bottom: 16px;
+    padding: 10px; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+    border: none;
+  outline: none;
+  resize: none;
+
+  
+}
+label {
+    
+    margin-bottom: 8px;
+    display: inline-block;
+    width: fit-content;
+}
+
+input, select {
+    
+    padding: 10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    
+}
+
+
+  video{
+    border-radius: 10px;  }
+    h2{
+      color: #000;
+    }

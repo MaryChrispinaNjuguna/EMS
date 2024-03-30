@@ -1,0 +1,239 @@
+/* Float four columns side by side */
+.column {
+    float: left;
+    padding: 0 20px;
+    
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: auto;
+    width: 100%;
+  margin-top: 50px;
+
+  
+  }
+  .row1 {margin: auto;
+    margin-top: 10px;
+  
+    
+    }
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    
+  }
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0;
+    text-align: center;
+    background-color: #f1f1f1;
+    
+  }
+ 
+  
+  .h1_first_page{
+    text-align: center;
+  }
+  h2{
+    color: #000;
+  }
+  
+  
+  
+  
+  
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #174e80;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 0px;
+    box-sizing: border-box;
+ }
+ 
+ .navbar ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 0px;
+ 
+}
+.navbar li {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+ 
+}
+body
+{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+ .navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+ }
+
+ 
+ @media screen and (max-width: 600px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+ }
+ .vertical_navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.vertical_navbar li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+.vertical_navbar li a.active {
+  background-color: #174e80;
+  color: white;
+}
+
+.vertical_navbar li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}  
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+
+}
+
+.table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+}
+
+
+.container_register {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    
+  }
+  
+  
+  
+ 
+  
+  .container_register input[type="text"],
+  .container_register input[type="email"],
+  .container_register  input[type="password"],
+  .container_register  input[type="number"],
+
+  .container_register  select {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    
+
+  }
+  
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #174e80;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #174e80;
+  }
+  .table_container{
+    overflow: auto;
+    max-height: 400px;
+  }
+  
+  input[type="submit"]
+  {
+    width: auto;
+      padding: 10px;
+      background-color: #174e80;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 20px ;
+      width: 150px;
+  }
+  select{
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    
+  }
